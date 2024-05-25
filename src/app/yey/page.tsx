@@ -26,7 +26,7 @@ export default function Home() {
             iya :3
           </a>
           <a
-            href={count === 9 ? "/yey" : undefined}
+            href={count === 9 ? "/done" : undefined}
             onClick={moveButton}
             style={{
               transform: `translate(${buttonPosition.left}px, ${buttonPosition.top}px)`,
