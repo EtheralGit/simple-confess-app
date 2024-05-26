@@ -23,7 +23,7 @@ export default function Home() {
       <div className="flex flex-col items-center">
         <img src="/cat-3.gif" alt="cat" className="sm:w-72 w-36 mb-6 mr-12" />
         <h1 className="text-gray-900 font-medium text-2xl text-center px-4">
-          Yes, It means we're officially dating now, right?
+          Yes, It means we&apos;re officially dating now, right?
         </h1>
         <div className="flex items-center gap-8 mt-8">
           <a
