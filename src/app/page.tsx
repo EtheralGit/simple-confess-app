@@ -17,7 +17,7 @@ export default function Home() {
             href="/yakin"
             className="bg-gray-700 text-white px-7 py-3 rounded-lg text-lg tracking-wider hover:opacity-90 active:scale-95 duration-100"
           >
-            Ga ah
+            No, fuk yu
           </a>
         </div>
       </div>

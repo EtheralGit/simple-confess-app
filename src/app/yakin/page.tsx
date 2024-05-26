@@ -35,7 +35,7 @@ export default function Home() {
               count === 8 ? "bg-orange-500" : "bg-gray-700 "
             } text-white px-7 py-3 rounded-lg text-lg tracking-wider hover:opacity-90 active:scale-90 duration-100 cursor-pointer`}
           >
-            {count === 8 ? "mau mau" : "ga mau"}
+            {count === 8 ? "mau mau" : "im fucking sure"}
           </a>
         </div>
       </div>
