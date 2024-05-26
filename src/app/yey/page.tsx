@@ -7,10 +7,17 @@ export default function Home() {
 
   const moveButton = () => {
     setCount((prev) => prev + 1);
-    const newTop = Math.floor(Math.random() * 300) - 100;
-    const newLeft = Math.floor(Math.random() * 300) - 100;
+    let newTop, newLeft;
+    const minDistance = 30; // 10 rem in pixels
+
+    do {
+      newTop = Math.floor(Math.random() * 300) - 100;
+      newLeft = Math.floor(Math.random() * 300) - 100;
+    } while (Math.abs(newTop - buttonPosition.top) < minDistance);
+
     setButtonPosition({ top: newTop, left: newLeft });
   };
+
   return (
     <main className="h-screen w-full flex items-center justify-center">
       <div className="flex flex-col items-center">
@@ -26,16 +33,16 @@ export default function Home() {
             iya :3
           </a>
           <a
-            href={count === 9 ? "/done" : undefined}
-            onClick={moveButton}
+            href={count === 12 ? "/done" : undefined}
+            onMouseEnter={count === 12 ? null : moveButton}
             style={{
               transform: `translate(${buttonPosition.left}px, ${buttonPosition.top}px)`,
             }}
             className={`${
-              count === 8 ? "bg-orange-500" : "bg-gray-700 "
+              count === 12 ? "bg-orange-500" : "bg-gray-700 "
             } text-white px-7 py-3 rounded-lg text-lg tracking-wider hover:opacity-90 active:scale-90 duration-100 cursor-pointer`}
           >
-            {count === 8 ? "iya iya" : "so asikk bgstttt"}
+            {count === 12 ? "iya iya" : "so asikk bgstttt"}
           </a>
         </div>
       </div>

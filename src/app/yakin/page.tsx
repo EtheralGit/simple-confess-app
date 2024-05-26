@@ -7,8 +7,14 @@ export default function Home() {
 
   const moveButton = () => {
     setCount((prev) => prev + 1);
-    const newTop = Math.floor(Math.random() * 300) - 100;
-    const newLeft = Math.floor(Math.random() * 300) - 100;
+    let newTop, newLeft;
+    const minDistance = 20; // 10 rem in pixels
+
+    do {
+      newTop = Math.floor(Math.random() * 300) - 100;
+      newLeft = Math.floor(Math.random() * 300) - 100;
+    } while (Math.abs(newTop - buttonPosition.top) < minDistance);
+
     setButtonPosition({ top: newTop, left: newLeft });
   };
   return (
@@ -26,16 +32,16 @@ export default function Home() {
             eh mau dong
           </a>
           <a
-            href={count === 9 ? "/yey" : undefined}
-            onClick={moveButton}
+            href={count === 12 ? "/yey" : undefined}
+            onMouseEnter={count === 12 ? null : moveButton}
             style={{
               transform: `translate(${buttonPosition.left}px, ${buttonPosition.top}px)`,
             }}
             className={`${
-              count === 8 ? "bg-orange-500" : "bg-gray-700 "
+              count === 12 ? "bg-orange-500" : "bg-gray-700 "
             } text-white px-7 py-3 rounded-lg text-lg tracking-wider hover:opacity-90 active:scale-90 duration-100 cursor-pointer`}
           >
-            {count === 8 ? "mau mau" : "im fucking sure"}
+            {count === 12 ? "mau mau" : "im fucking sure"}
           </a>
         </div>
       </div>
