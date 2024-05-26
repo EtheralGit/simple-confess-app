@@ -33,7 +33,7 @@ export default function Home() {
           </a>
           <a
             href={count === 12 ? "/yey" : undefined}
-            onMouseEnter={count === 12 ? undefined : () => moveButton}
+            onMouseEnter={count === 12 ? undefined : moveButton}
             style={{
               transform: `translate(${buttonPosition.left}px, ${buttonPosition.top}px)`,
             }}
