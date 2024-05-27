@@ -32,7 +32,7 @@ export default function Home() {
             jk, i love you too.
           </a>
           <a
-            href={count === 12 ? "/yey" : undefined}
+            href={count === 11 ? "/yey" : undefined}
             onMouseEnter={count === 12 ? undefined : moveButton}
             onClick={count === 11 ? undefined : moveButton}
             style={{
