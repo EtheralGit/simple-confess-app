@@ -33,7 +33,7 @@ export default function Home() {
             of course :3
           </a>
           <a
-            href={count === 11 ? "/done" : undefined}
+            href={count >= 11 ? "/done" : undefined}
             onMouseEnter={count === 12 ? undefined : moveButton}
             onClick={count === 11 ? undefined : moveButton}
             style={{
