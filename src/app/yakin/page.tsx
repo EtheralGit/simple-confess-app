@@ -34,7 +34,7 @@ export default function Home() {
           <a
             href={count >= 11 ? "/yey" : undefined}
             onMouseEnter={count === 12 ? undefined : moveButton}
-            onClick={count === 11 ? undefined : moveButton}
+            onClick={count >= 11 ? undefined : moveButton}
             style={{
               transform: `translate(${buttonPosition.left}px, ${buttonPosition.top}px)`,
             }}
