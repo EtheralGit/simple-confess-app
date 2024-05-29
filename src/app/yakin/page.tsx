@@ -32,9 +32,9 @@ export default function Home() {
             jk, i love you too.
           </a>
           <a
-            href={count >= 11 ? "/yey" : undefined}
+            href={count >11 ? "/yey" : undefined}
             onMouseEnter={count === 12 ? undefined : moveButton}
-            onClick={count >= 11 ? undefined : moveButton}
+            onClick={count > 11 ? undefined : moveButton}
             style={{
               transform: `translate(${buttonPosition.left}px, ${buttonPosition.top}px)`,
             }}
